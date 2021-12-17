@@ -9,7 +9,7 @@ import { nanoid } from "nanoid";
 const STORAGE_KEY = "contacts";
 
 const App = () => {
-  const [contacts, setContacts] = useState(storage.get(STORAGE_KEY));
+  const [contacts, setContacts] = useState(storage.get(STORAGE_KEY) ?? []);
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
